@@ -16,7 +16,15 @@
   }
 }
 
+@font-face {
+  font-family: 'BeaufortforLOL';
+  src: url('../assets/LolFont/BeaufortforLOL-Medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+  }
+
 body {
+  font-family: 'BeaufortforLOL' !important;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
