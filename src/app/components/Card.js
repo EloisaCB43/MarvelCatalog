@@ -23,14 +23,14 @@ function Card(props) {
         />
       </div>
 
-      <h3 className="border rounded-[5px] border-solid border-[#5B5A56] text-[#F0E6D2] bg-[#1E2328] w-[178px] h-[49px] py-1 px-5 text-base text-center">
+      <p className="border rounded-[5px] border-solid border-[#5B5A56] text-[#F0E6D2] bg-[#1E2328] w-[178px] h-[49px] py-1 px-5 text-base text-center">
         <span className="font-sans align-middle">Comics:</span>{" "}
         <span className="text-3xl align-middle pl-3">{comics}</span>
-      </h3>
-      <h3 className="border rounded-[5px] border-solid border-[#5B5A56] text-[#F0E6D2] bg-[#1E2328] w-[178px] h-[49px] py-1 px-5 text-base text-center">
+      </p>
+      <p className="border rounded-[5px] border-solid border-[#5B5A56] text-[#F0E6D2] bg-[#1E2328] w-[178px] h-[49px] py-1 px-5 text-base text-center">
         <span className="font-sans align-middle">Movies:</span>{" "}
         <span className="text-3xl align-middle pl-3">{movies}</span>
-      </h3>
+      </p>
     </div>
   );
 }

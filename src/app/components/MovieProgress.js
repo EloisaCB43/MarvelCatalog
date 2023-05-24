@@ -40,14 +40,25 @@ const Progress = styled.div`
 
 function MovieProgress() {
   return (
-    <div>
-      <h1>PROGRESO DE PELICULAS PRODUCIDAS</h1>
-      <p>xx Películas Meta de Producción</p>
+    <div className="w-[510px] h-[193px] p-[23px] rounded flex flex-col items-center justify-between border-2 border-[#42331A] bg-[#111111] ">
+      <h2 className="text-[#F0E6D2] text-xl ">
+        PROGRESO DE PELICULAS PRODUCIDAS
+      </h2>
+      <p className="flex self-end text-[#C89B3C] text-[11px] leading-[0px]">
+        xx Películas
+      </p>
+      <p className="mb-1px flex self-end text-[#C89B3C] text-[11px] leading-[0px]">
+        Meta de Producción
+      </p>
       <BarContainer>
         <CellsSeparation />
         <Progress value={40} />
       </BarContainer>
-      <p>xx Películas Producidas</p>
+      <div className="w-[40%] flex self-start justify-end">
+        <p className="w-[60px] text-[#1DA5B4] text-[11px] leading-none ">
+          xx Películas Producidas
+        </p>
+      </div>
     </div>
   );
 }
