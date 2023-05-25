@@ -19,7 +19,7 @@ const PageItem = styled.li`
   place-items: center;
   background: ${(props) =>
     props.$selected
-      ? "linear-gradient(180deg, #231F20 0%, rgba(34, 34, 34, 0) 100%);"
+      ? "linear-gradient(180deg, rgba(34, 34, 34, 0) 0%, #231F20 100%), url(/navbar_selected_page.png) no-repeat top"
       : "none"};
   color: ${(props) => (props.$selected ? "#C89B3C" : "#F0E6D2")};
 `;
@@ -33,12 +33,12 @@ function NavBar() {
 
       <ul className="flex grow flex-row ">
         <PageItem $selected={false}>
-          <a href="" className="text-sm text-[#F0E6D2] ">
+          <a href="" className="text-sm">
             HOME
           </a>
         </PageItem>
         <PageItem $selected={true}>
-          <a href="" className="text-sm text-[#F0E6D2]">
+          <a href="" className="text-sm">
             PERSONAJES
           </a>
         </PageItem>

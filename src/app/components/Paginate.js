@@ -20,7 +20,7 @@ function CardPaginate() {
   return (
     <PaginateContainer>
       <ArrowLeftCircleIcon className="flex flex-grow stroke-[34px] h-[34px] fill-[#C89B3C]" />
-      <h1 className="text-[#C89B3C] text-[20px]">1 / 5</h1>
+      <p className="text-[#C89B3C] text-[20px]">1 / 5</p>
       <ArrowRightCircleIcon className="flex flex-grow stroke-[34px] h-[34px] fill-[#C89B3C]" />
     </PaginateContainer>
   );

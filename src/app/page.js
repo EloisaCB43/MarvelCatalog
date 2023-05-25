@@ -64,6 +64,8 @@ export default function Home() {
         <Card name="NAME" comics={25} movies={25} />
         <Card name="NAME" comics={25} movies={25} />
         <Card name="NAME" comics={25} movies={25} />
+        <Card name="NAME" comics={25} movies={25} />
+        <Card name="NAME" comics={25} movies={25} />
       </CardContainer>
       <CardPaginate />
     </PageContainer>
