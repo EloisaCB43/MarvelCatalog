@@ -5,6 +5,7 @@ import MovieProgress from "./components/MovieProgress";
 import Video from "./components/VideoCard";
 import Image from "./components/ImageCard";
 import NavBar from "./components/NavBar";
+import CardPaginate from "./components/Paginate";
 import styled from "styled-components";
 
 const PageContainer = styled.main`
@@ -64,6 +65,7 @@ export default function Home() {
         <Card name="NAME" comics={25} movies={25} />
         <Card name="NAME" comics={25} movies={25} />
       </CardContainer>
+      <CardPaginate />
     </PageContainer>
   );
 }

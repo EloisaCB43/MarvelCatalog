@@ -20,7 +20,8 @@ const PageItem = styled.li`
   background: ${(props) =>
     props.$selected
       ? "linear-gradient(180deg, #231F20 0%, rgba(34, 34, 34, 0) 100%);"
-      : "white"};
+      : "none"};
+  color: ${(props) => (props.$selected ? "#C89B3C" : "#F0E6D2")};
 `;
 
 function NavBar() {
@@ -31,12 +32,12 @@ function NavBar() {
       </a>
 
       <ul className="flex grow flex-row ">
-        <PageItem>
+        <PageItem $selected={false}>
           <a href="" className="text-sm text-[#F0E6D2] ">
             HOME
           </a>
         </PageItem>
-        <PageItem>
+        <PageItem $selected={true}>
           <a href="" className="text-sm text-[#F0E6D2]">
             PERSONAJES
           </a>
