@@ -3,7 +3,7 @@
 import Card from "./components/Card";
 import MovieProgress from "./components/MovieProgress";
 import Video from "./components/VideoCard";
-import Image from "./components/ImageCard";
+import ImagePoster from "./components/ImageCard";
 import NavBar from "./components/NavBar";
 import CardPaginate from "./components/Paginate";
 import styled from "styled-components";
@@ -74,7 +74,7 @@ export default function Home() {
       <MediaContainer>
         <MovieProgress />
         <Video />
-        <Image />
+        <ImagePoster />
       </MediaContainer>
 
       <CardContainer>

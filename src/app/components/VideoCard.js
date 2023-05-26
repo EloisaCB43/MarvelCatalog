@@ -1,7 +1,11 @@
 function Video() {
   return (
-    <div className="w-[382px] h-[193px] p-[20px] rounded border border-[#42331A] bg-[#111111] ">
-      <h2 className="text-[#F0E6D2] text-xl ">AQUÍ VA UN VIDEO</h2>
+    <div className="w-[382px] h-[193px]  rounded border border-[#42331A] bg-[#111111] ">
+      <iframe
+        width="378"
+        height="190"
+        src="https://www.youtube.com/embed/IRCM1lkx-TE"
+      ></iframe>
     </div>
   );
 }

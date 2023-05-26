@@ -1,9 +1,11 @@
-function Image() {
+import Image from "next/image";
+
+function ImagePoster() {
   return (
-    <div className="w-[382px] h-[193px] p-[20px] rounded border border-[#42331A] bg-[#111111] ">
-      <h2 className="text-[#F0E6D2] text-xl ">AQUÍ VA UNA IMAGEN</h2>
+    <div className="w-[382px] h-[193px]  rounded border border-[#42331A] bg-[#111111] relative">
+      <Image src={"/poster_image.jpg"} alt="poster" fill />
     </div>
   );
 }
 
-export default Image;
+export default ImagePoster;
