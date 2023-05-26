@@ -72,7 +72,7 @@ export default function Home() {
     <PageContainer className="min-h-screen" id="page">
       <NavBar />
       <MediaContainer>
-        <MovieProgress />
+        <MovieProgress meta={200} produced={80} />
         <Video />
         <ImagePoster />
       </MediaContainer>
