@@ -28,7 +28,7 @@ function NavBar() {
   return (
     <NavContainer className="w-full border-b border-b-[#3C3C41]">
       <a href="" className=" relative grid place-items-center">
-        <Image src="/marvel_logo.svg" width={150} height={40} />
+        <Image src="/marvel_logo.svg" alt="logo" width={150} height={40} />
       </a>
 
       <ul className="flex grow flex-row ">
@@ -44,10 +44,10 @@ function NavBar() {
         </PageItem>
       </ul>
       <a href="">
-        <BellIcon className="stroke-[17px] h-[19px] fill-[#C89B3C]" />{" "}
+        <BellIcon className="stroke-[17px] h-[19px] fill-[#F0E6D2] hover:fill-[#C89B3C]" />
       </a>
       <a href="">
-        <Cog8ToothIcon className="stroke-[17px] h-[19px] fill-[#F0E6D2]" />
+        <Cog8ToothIcon className="stroke-[17px] h-[19px] fill-[#F0E6D2] hover:fill-[#C89B3C]" />
       </a>
     </NavContainer>
   );

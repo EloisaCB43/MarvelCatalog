@@ -7,6 +7,8 @@ import Image from "./components/ImageCard";
 import NavBar from "./components/NavBar";
 import CardPaginate from "./components/Paginate";
 import styled from "styled-components";
+import { useEffect, useState } from "react";
+import fetchCharacters from "./api/fetchCharacters";
 
 const PageContainer = styled.main`
   display: flex;
@@ -51,6 +53,21 @@ const CardContainer = styled.div`
 `;
 
 export default function Home() {
+  const [characters, setCharacters] = useState([]);
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const getCharacters = async () => {
+      const { data } = await fetchCharacters(offset);
+
+      setCharacters(data.results);
+    };
+
+    getCharacters();
+  }, [offset]);
+
+  console.log(characters);
+
   return (
     <PageContainer className="min-h-screen">
       <NavBar />
@@ -61,13 +78,17 @@ export default function Home() {
       </MediaContainer>
 
       <CardContainer>
-        <Card name="NAME" comics={25} movies={25} />
-        <Card name="NAME" comics={25} movies={25} />
-        <Card name="NAME" comics={25} movies={25} />
-        <Card name="NAME" comics={25} movies={25} />
-        <Card name="NAME" comics={25} movies={25} />
+        {characters.map((character) => (
+          <Card
+            key={character.id}
+            name={character.name}
+            comics={character.comics.available}
+            movies={character.series.available}
+            avatar={character.thumbnail.path}
+          />
+        ))}
       </CardContainer>
-      <CardPaginate />
+      <CardPaginate setOffset={setOffset} offset={offset} />
     </PageContainer>
   );
 }

@@ -16,12 +16,28 @@ const PaginateContainer = styled.div`
   }
 `;
 
-function CardPaginate() {
+function CardPaginate(props) {
+  const { offset, setOffset } = props;
+
   return (
     <PaginateContainer>
-      <ArrowLeftCircleIcon className="flex flex-grow stroke-[34px] h-[34px] fill-[#C89B3C]" />
-      <p className="text-[#C89B3C] text-[20px]">1 / 5</p>
-      <ArrowRightCircleIcon className="flex flex-grow stroke-[34px] h-[34px] fill-[#C89B3C]" />
+      <ArrowLeftCircleIcon
+        className="flex flex-grow stroke-[34px] h-[34px] fill-[#C89B3C]"
+        onClick={() => {
+          if (offset > 0) {
+            setOffset(offset - 1);
+          }
+        }}
+      />
+      <p className="text-[#C89B3C] text-[20px]">{offset + 1} / 20</p>
+      <ArrowRightCircleIcon
+        className="flex flex-grow stroke-[34px] h-[34px] fill-[#C89B3C]"
+        onClick={() => {
+          if (offset != 20) {
+            setOffset(offset + 1);
+          }
+        }}
+      />
     </PaginateContainer>
   );
 }
