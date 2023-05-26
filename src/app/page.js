@@ -9,6 +9,7 @@ import CardPaginate from "./components/Paginate";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import fetchCharacters from "./api/fetchCharacters";
+import Modal from "./components/Modal";
 
 const PageContainer = styled.main`
   display: flex;
@@ -54,6 +55,7 @@ const CardContainer = styled.div`
 
 export default function Home() {
   const [characters, setCharacters] = useState([]);
+  const [selectedCharacter, setSelectedCharacter] = useState(null);
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
@@ -66,10 +68,8 @@ export default function Home() {
     getCharacters();
   }, [offset]);
 
-  console.log(characters);
-
   return (
-    <PageContainer className="min-h-screen">
+    <PageContainer className="min-h-screen" id="page">
       <NavBar />
       <MediaContainer>
         <MovieProgress />
@@ -85,10 +85,17 @@ export default function Home() {
             comics={character.comics.available}
             movies={character.series.available}
             avatar={character.thumbnail.path}
+            setSelectedCharacter={setSelectedCharacter}
+            data={character}
           />
         ))}
       </CardContainer>
       <CardPaginate setOffset={setOffset} offset={offset} />
+
+      <Modal
+        selectedCharacter={selectedCharacter}
+        setSelectedCharacter={setSelectedCharacter}
+      />
     </PageContainer>
   );
 }

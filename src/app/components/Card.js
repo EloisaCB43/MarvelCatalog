@@ -1,9 +1,12 @@
 import Image from "next/image";
 
 function Card(props) {
-  const { name, comics, movies, avatar } = props;
+  const { name, comics, movies, avatar, data, setSelectedCharacter } = props;
   return (
-    <div className="w-[248px] h-[448px] rounded-[5px] flex flex-col justify-between items-center relative p-[35px] gap-5 bg-[url(/card_container.png)]">
+    <div
+      className="w-[248px] h-[448px] rounded-[5px] flex flex-col justify-between items-center relative p-[35px] gap-5 bg-[url(/card_container.png)]"
+      onClick={() => setSelectedCharacter(data)}
+    >
       <div className="w-[179px] h-[18px] relative flex justify-center items-center bg-[url(/name_decorators.png)]">
         <h2 className="text-center text-[#F0E6D2] text-[14px]  w-[81px]">
           {name}
